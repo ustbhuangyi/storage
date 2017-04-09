@@ -71,7 +71,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var store = {
-	  version: ("1.0.0"),
+	  version: ("1.0.1"),
 	  storage: window.localStorage,
 	  session: {
 	    storage: window.sessionStorage
