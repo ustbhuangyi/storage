@@ -1,5 +1,5 @@
 {
-  "name": "esay-storage",
+  "name": "good-storage",
   "version": "1.0.0",
   "description": "a storage lib which support sessionStorage and localStorage with the same api",
   "main": "dist/storage.min.js",
