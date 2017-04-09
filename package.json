@@ -1,6 +1,6 @@
 {
   "name": "good-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a storage lib which support sessionStorage and localStorage with the same api",
   "main": "dist/storage.js",
   "scripts": {
