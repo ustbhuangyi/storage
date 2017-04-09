@@ -2,7 +2,7 @@
   "name": "good-storage",
   "version": "1.0.0",
   "description": "a storage lib which support sessionStorage and localStorage with the same api",
-  "main": "dist/storage.min.js",
+  "main": "dist/storage.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js --port 9090 --inline --hot --content-base ./demo --host 0.0.0.0",
     "build": "webpack --config webpack.prod.js"
