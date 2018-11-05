@@ -3,7 +3,7 @@
  */
 let store = {
   /* eslint-disable no-undef */
-  version: __VERSION__,
+  version: '1.0.2',
   storage: window.localStorage,
   session: {
     storage: window.sessionStorage
