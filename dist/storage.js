@@ -1,5 +1,5 @@
 /**
- * good-storage v1.0.2
+ * good-storage v1.1.0
  * (c) 2018 ustbhuangyi
  */
 (function (global, factory) {
@@ -15,7 +15,7 @@
    */
   var store = {
     /* eslint-disable no-undef */
-    version: '1.0.2',
+    version: '1.1.0',
     storage: window.localStorage,
     session: {
       storage: window.sessionStorage
