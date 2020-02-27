@@ -1,6 +1,6 @@
 /**
- * good-storage v1.1.0
- * (c) 2018 ustbhuangyi
+ * good-storage v1.1.1
+ * (c) 2020 ustbhuangyi
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -13,12 +13,14 @@
   /**
    * 本地存储实现,封装localStorage和sessionStorage
    */
+  var isServer = typeof window === 'undefined';
+
   var store = {
     /* eslint-disable no-undef */
-    version: '1.1.0',
-    storage: window.localStorage,
+    version: '1.1.1',
+    storage: !isServer ? window.localStorage : null,
     session: {
-      storage: window.sessionStorage
+      storage: !isServer ? window.sessionStorage : null
     }
   };
 

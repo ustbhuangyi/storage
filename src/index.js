@@ -5,7 +5,7 @@ const isServer = typeof window === 'undefined'
 
 const store = {
   /* eslint-disable no-undef */
-  version: '1.1.0',
+  version: '1.1.1',
   storage: !isServer ? window.localStorage : null,
   session: {
     storage: !isServer ? window.sessionStorage : null
