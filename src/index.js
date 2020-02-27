@@ -1,17 +1,19 @@
 /**
  * 本地存储实现,封装localStorage和sessionStorage
  */
-let store = {
+const isServer = typeof window === 'undefined'
+
+const store = {
   /* eslint-disable no-undef */
   version: '1.1.0',
-  storage: window.localStorage,
+  storage: !isServer ? window.localStorage : null,
   session: {
-    storage: window.sessionStorage
+    storage: !isServer ? window.sessionStorage : null
   }
 }
 
 const api = {
-  set(key, val) {
+  set (key, val) {
     if (this.disabled) {
       return
     }
@@ -22,7 +24,7 @@ const api = {
     return val
   },
 
-  get(key, def) {
+  get (key, def) {
     if (this.disabled) {
       return def
     }
@@ -30,25 +32,25 @@ const api = {
     return (val === undefined ? def : val)
   },
 
-  has(key) {
+  has (key) {
     return this.get(key) !== undefined
   },
 
-  remove(key) {
+  remove (key) {
     if (this.disabled) {
       return
     }
     this.storage.removeItem(key)
   },
 
-  clear() {
+  clear () {
     if (this.disabled) {
       return
     }
     this.storage.clear()
   },
 
-  getAll() {
+  getAll () {
     if (this.disabled) {
       return null
     }
@@ -59,7 +61,7 @@ const api = {
     return ret
   },
 
-  forEach(callback) {
+  forEach (callback) {
     if (this.disabled) {
       return
     }
@@ -74,11 +76,11 @@ Object.assign(store, api)
 
 Object.assign(store.session, api)
 
-function serialize(val) {
+function serialize (val) {
   return JSON.stringify(val)
 }
 
-function deserialize(val) {
+function deserialize (val) {
   if (typeof val !== 'string') {
     return undefined
   }
